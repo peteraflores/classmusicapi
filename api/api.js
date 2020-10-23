@@ -1,4 +1,3 @@
-const http = require('http');
 const hostname = '127.0.0.1';
 const port = 3000;
 var express = require('express');
@@ -11,6 +10,7 @@ function connect(){
     database: 'p320_32',
     password: 'shaiw1Zeeze6nie1idae',
     port: 5432,
+    connectionTimeoutMillis?: 60000, // number of milliseconds to wait for connection, default is no timeout
   })
   client.connect()
   return client
